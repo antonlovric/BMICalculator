@@ -12,6 +12,7 @@
     font-size: 3.5rem;
     text-align: center;
     margin-bottom: 1.2em;
+    margin-top: 1em;
   }
   p {
     font-size: 1.7rem;
@@ -86,4 +87,49 @@ label {
   align-content: center;
   justify-content: center;
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .calculationContainer {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 1.2rem;
+      padding: 0.5em;
+      text-align: justify;
+    }
+  }
+  label {
+    width: 20rem;
+    font-size: 1.2rem;
+  }
+  .inputArea {
+    width: 9rem;
+  }
+  .height,
+  .weight {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+  }
+  .inputError {
+    font-size: 0.8rem;
+    position: absolute;
+    left: -2%;
+    bottom: -120%;
+    width: 100%;
+  }
+  .formInput {
+    margin-left: 0.3em;
+  }
+  .weight {
+    margin-top: 3.2em;
+  }
+  .buttonCalculate {
+    margin: 1.2em;
+  }
 }

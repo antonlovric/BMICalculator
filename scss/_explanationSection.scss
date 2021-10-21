@@ -26,3 +26,33 @@
     margin-top: 2em;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .explanationContainer {
+    background: $colorLightBackground;
+    height: 45em;
+    flex-direction: column;
+  }
+  .explanationText {
+    h2 {
+      font-size: 1.7rem;
+      margin-bottom: 1em;
+    }
+    p,
+    li {
+      width: 20rem;
+      line-height: 1.5;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+    li {
+      margin: 0.3em;
+      padding-left: 1em;
+      width: 18rem;
+    }
+    ul {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+  }
+}

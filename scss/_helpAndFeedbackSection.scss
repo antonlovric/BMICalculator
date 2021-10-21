@@ -32,3 +32,18 @@
     width: 50rem;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .feedbackParagraph {
+    font-size: 1.3rem;
+    padding: 0.3em;
+    text-align: justify;
+  }
+  .help {
+    li {
+      font-size: 1rem;
+      margin: 1.8em;
+      width: 18rem;
+    }
+  }
+}

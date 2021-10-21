@@ -2,7 +2,7 @@
 .navigation {
   display: flex;
   align-items: center;
-
+  justify-content: flex-end;
   gap: 5em;
   height: 80px;
   background-color: $colorPurple;
@@ -16,4 +16,14 @@
   display: flex;
   font-size: 1.2rem;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .navigationLink {
+    font-size: 0.8rem;
+    padding: 0.5em;
+  }
+  .navigation {
+    gap: 1em;
+  }
 }
