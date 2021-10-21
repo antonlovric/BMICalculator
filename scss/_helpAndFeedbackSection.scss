@@ -1,0 +1,34 @@
+.feedback,
+.help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.feedbackParagraph {
+  font-size: 1.5rem;
+  margin: 0.5em;
+}
+
+.calculateAgainButton {
+  font-size: 1.2rem;
+  width: 10rem;
+  padding: 1em;
+  display: none;
+  margin-bottom: 2em;
+}
+
+.help {
+  ul {
+    display: none;
+    margin: 3em;
+  }
+}
+.help {
+  li {
+    font-size: 1.3rem;
+    margin: 0.5em;
+    width: 50rem;
+  }
+}

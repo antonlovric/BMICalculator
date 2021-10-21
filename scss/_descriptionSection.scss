@@ -1,0 +1,18 @@
+@use "./variables" as *;
+
+.descriptionText {
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+  }
+  p {
+    width: 40rem;
+    line-height: 1.5;
+    font-size: 1.4rem;
+  }
+}
+
+.descriptionContainer {
+  background: $colorDarkBackground;
+  height: 45em;
+}

@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+.explanationContainer {
+  background: $colorLightBackground;
+  height: 45em;
+  flex-direction: row-reverse;
+}
+
+.explanationText {
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+  }
+  p,
+  li {
+    width: 40rem;
+    line-height: 1.5;
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+  li {
+    margin: 0.6em;
+    padding-left: 1em;
+  }
+  ul {
+    margin-top: 2em;
+  }
+}

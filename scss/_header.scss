@@ -1,0 +1,19 @@
+@use "./variables" as *;
+.navigation {
+  display: flex;
+  align-items: center;
+
+  gap: 5em;
+  height: 80px;
+  background-color: $colorPurple;
+}
+
+.navigationLink {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  height: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+}

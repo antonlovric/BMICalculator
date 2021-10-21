@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heroSection {
+  background-color: #fdfdfd;
+  width: 100%;
+  height: 90vh;
+  padding: 5em;
+}
+
+.heroText h1 {
+  width: 10rem;
+  font-size: 5rem;
+  color: #6c63ff;
+  margin-bottom: 0.7em;
+}
+.heroText p {
+  width: 40rem;
+  font-size: 3rem;
+}
+
+body {
+  font-family: open;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h1,
+h2 {
+  color: #6c63ff;
+}
+
+.image {
+  width: 605px;
+}
+
+.descriptionText h2 {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+.descriptionText p {
+  width: 40rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+.descriptionContainer {
+  background: #dae8ea;
+  height: 45em;
+}
+
+.explanationContainer {
+  background: #fdfdfd;
+  height: 45em;
+  flex-direction: row-reverse;
+}
+
+.explanationText h2 {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+.explanationText p,
+.explanationText li {
+  width: 40rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+.explanationText li {
+  margin: 0.6em;
+  padding-left: 1em;
+}
+.explanationText ul {
+  margin-top: 2em;
+}
+
+.calculationSection {
+  background: #dae8ea;
+  height: max-content;
+}
+
+.calculationContainer {
+  display: flex;
+  flex-direction: column;
+}
+.calculationContainer h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+.calculationContainer p {
+  font-size: 1.7rem;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  margin-left: 20%;
+  gap: 2em;
+}
+
+.weight,
+.height {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputArea {
+  appearance: textfield;
+  width: 15rem;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.inputs {
+  position: relative;
+}
+
+.inputError {
+  background: #b00020;
+  color: #fdfdfd;
+  padding: 0.5em;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+label {
+  width: 20rem;
+  font-size: 1.5rem;
+}
+
+.buttonContainer {
+  margin-top: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonCalculate {
+  font-size: 1.2rem;
+  width: 10rem;
+  padding: 1em;
+}
+
+.bmiContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
+#progressCircleContainer {
+  background: #343434;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  align-content: center;
+  justify-content: center;
+  display: none;
+}
+
+.feedback,
+.help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.feedbackParagraph {
+  font-size: 1.5rem;
+  margin: 0.5em;
+}
+
+.calculateAgainButton {
+  font-size: 1.2rem;
+  width: 10rem;
+  padding: 1em;
+  display: none;
+  margin-bottom: 2em;
+}
+
+.help ul {
+  display: none;
+  margin: 3em;
+}
+
+.help li {
+  font-size: 1.3rem;
+  margin: 0.5em;
+  width: 50rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 5em;
+  height: 80px;
+  background-color: #6c63ff;
+}
+
+.navigationLink {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  height: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,89 @@
+@use "./variables" as *;
+
+.calculationSection {
+  background: $colorDarkBackground;
+  height: max-content;
+}
+
+.calculationContainer {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 1.2em;
+  }
+  p {
+    font-size: 1.7rem;
+  }
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  margin-left: 20%;
+  gap: 2em;
+}
+
+.weight,
+.height {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputArea {
+  appearance: textfield;
+  width: 15rem;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.inputs {
+  position: relative;
+}
+
+.inputError {
+  background: $colorErrorBackground;
+  color: $colorLightText;
+  padding: 0.5em;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+label {
+  width: 20rem;
+  font-size: 1.5rem;
+}
+
+.buttonContainer {
+  margin-top: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonCalculate {
+  font-size: 1.2rem;
+  width: 10rem;
+  padding: 1em;
+}
+
+.bmiContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
+#progressCircleContainer {
+  background: #343434;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  align-content: center;
+  justify-content: center;
+  display: none;
+}

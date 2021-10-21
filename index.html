@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/progressbar.min.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+        <a href="#heroSection" class="navigationLink">Home</a>
+        <a href="#descriptionSection" class="navigationLink">BMI Description</a>
+        <a href="#explanationSection" class="navigationLink"
+          >How is BMI measured</a
+        >
+        <a href="#calculationSection" class="navigationLink"
+          >Measure Your BMI</a
+        >
+      </nav>
+    </header>
+    <section id="heroSection" class="heroSection">
+      <div class="container heroContainer">
+        <img
+          src="./images/heroImage.svg"
+          alt="Hero Image"
+          class="image heroImage"
+        />
+        <div class="heroText">
+          <h1>BMI Calculator</h1>
+          <p>
+            Calculate your Body Mass Index to improve your lifestyle right now!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="descriptionSection" class="descriptionSection">
+      <div class="container descriptionContainer">
+        <img
+          src="./images/descriptionImage.svg"
+          alt="Personal Trainer Image"
+          class="image descriptionImage"
+        />
+        <div class="descriptionText">
+          <h2>What does BMI mean?</h2>
+          <p>
+            Body mass index (BMI) is a measurement which indicates how healthy
+            your height and weight proportions are. It is calculated by dividing
+            the weight (in kilograms) and height (in centimeters). This simple
+            formula can be lifechanging and help you stay on track for a healthy
+            and prosperous life!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="explanationSection" class="explanationSection">
+      <div class="container explanationContainer">
+        <img
+          src="./images/explanationImage.svg"
+          alt="Explanation Image"
+          class="image explanationImage"
+        />
+        <div class="explanationText">
+          <h2>How is BMI measured?</h2>
+          <p>
+            A person’s BMI is measured by dividing the weight (in kilograms) and
+            height (in centimeters). The given number is the BMI and these are
+            the categories upon which the BMI is evaluated:
+          </p>
+          <ul>
+            <li>Underweight (BMI is lesser than 18.5)</li>
+            <li>Regular weight (BMI is between 18.5 and 24.9)</li>
+            <li>Overweight (BMI is between 25 and 29.9)</li>
+            <li>Underweight (BMI is lesser than 18.5)</li>
+            <li>Obesity (BMI is greater than 30)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="calculationSection" class="calculationSection">
+      <div class="container calculationContainer">
+        <h2>I want to measure my BMI!</h2>
+        <p>
+          That's fantastic! Just enter your height and weight down below and let
+          us do the magic!
+        </p>
+      </div>
+      <form class="form">
+        <div class="formInput">
+          <div class="height">
+            <label class="heightLabel" for="height"
+              >Height in centimeters:</label
+            >
+            <div class="inputs">
+              <input
+                class="inputArea"
+                id="height"
+                type="number"
+                placeholder="Ex. 170"
+                name="height"
+              />
+              <span class="inputError" id="inputErrorHeight"
+                >Please make sure to input a valid height!</span
+              >
+            </div>
+          </div>
+          <div class="weight">
+            <label class="weightLabel" for="weight">Weight in kilograms:</label>
+            <div class="inputs">
+              <input
+                class="inputArea"
+                id="weight"
+                type="number"
+                placeholder="Ex. 80"
+                name="weight"
+              />
+              <span class="inputError" id="inputErrorWeight"
+                >Please make sure to input a valid weight!</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="buttonContainer">
+          <button class="buttonCalculate">Calculate BMI</button>
+        </div>
+      </form>
+      <div class="bmiContainer">
+        <div id="progressCircleContainer">
+          <div id="circle"></div>
+        </div>
+      </div>
+      <section class="feedback">
+        <p class="feedbackParagraph underweightFeedback"></p>
+        <p class="feedbackParagraph regularweightFeedback"></p>
+        <p class="feedbackParagraph overweightFeedback"></p>
+        <p class="feedbackParagraph obeseFeedback"></p>
+      </section>
+      <section class="help">
+        <ul class="underweightHelp">
+          <li>
+            Check out
+            <a
+              href="https://www.nhs.uk/live-well/healthy-weight/advice-for-underweight-adults/"
+              class="helpLink"
+            >
+              this article</a
+            >
+            to find out more about your situation
+          </li>
+          <li>
+            See
+            <a
+              href="https://www.healthdirect.gov.au/what-to-do-if-you-are-underweight"
+              class="helpLink"
+            >
+              what </a
+            >you should do to gain weight
+          </li>
+          <li>
+            Take a look at
+            <a
+              href="https://exercise.lovetoknow.com/Exercise_for_Underweight"
+              class="helpLink"
+            >
+              this</a
+            >
+            workout plan to get going
+          </li>
+        </ul>
+        <ul class="regularweightHelp">
+          <li>
+            <a
+              href="https://www.brunet.ca/en/health/health-tips/benefits-of-maintaining-a-healthy-body-weight/"
+            >
+              Here </a
+            >are some benefits to having a healthy weight
+          </li>
+          <li>
+            See
+            <a
+              href="https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/keeping-a-healthy-body-weight"
+              class="helpLink"
+            >
+              what
+            </a>
+            you should do to maintain your weight
+          </li>
+          <li>
+            Take a look at
+            <a
+              href="https://www.cdc.gov/healthyweight/physical_activity/index.html"
+              class="helpLink"
+            >
+              these
+            </a>
+            exercises so you can stay in shape
+          </li>
+        </ul>
+        <ul class="overweightHelp">
+          <li>
+            Check out
+            <a
+              href="https://myhealth.alberta.ca/Health/aftercareinformation/pages/conditions.aspx?hwid=abl3407"
+              class="helpLink"
+            ></a>
+            this article to find out more about your situation
+          </li>
+          <li>
+            See
+            <a
+              href="https://www.nhs.uk/live-well/healthy-weight/start-losing-weight/"
+              class="helpLink"
+            >
+              what</a
+            >
+            you should do to lose weight
+          </li>
+          <li>
+            Take a look at
+            <a
+              href="http://www.bighealthandfitness.co.uk/easy-workouts-for-overweight-beginners/"
+              class="helpLink"
+            >
+              this
+            </a>
+            workout plan to get going
+          </li>
+        </ul>
+        <ul class="obeseHelp">
+          <li>
+            Check out
+            <a href="https://www.nhs.uk/conditions/obesity/" class="helpLink">
+              this
+            </a>
+            article to find out more about your situation
+          </li>
+          <li>
+            See
+            <a
+              href="https://www.webmd.com/diet/obesity/ss/slideshow-obesity-weight-loss-tips"
+              class="helpLink"
+            >
+              what
+            </a>
+            you should do to lose weight
+          </li>
+          <li>
+            Take a look at
+            <a
+              href="https://www.sparkpeople.com/resource/fitness_articles.asp?id=2331"
+              class="helpLink"
+            >
+              this
+            </a>
+            workout plan to get going
+          </li>
+        </ul>
+        <button class="calculateAgainButton">Calculate Again!</button>
+      </section>
+    </section>
+  </body>
+</html>
