@@ -24,13 +24,37 @@
   font-size: 3rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
+  .heroSection {
+    padding: 3em;
+    height: 65vh;
+  }
+
   .heroText h1 {
     font-size: 2.8rem;
-    order: 1;
+    width: 100%;
   }
   .heroText p {
     font-size: 1.5rem;
+    text-align: justify;
+    width: 22rem;
+    margin-bottom: 1em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroSection {
+    padding: 3em;
+    height: 70vh;
+  }
+
+  .heroText h1 {
+    font-size: 2.8rem;
+    order: 1;
+    width: 100%;
+  }
+  .heroText p {
+    font-size: 1.5rem;
+    text-align: justify;
     width: 100%;
     order: 3;
     margin-bottom: 1em;
@@ -43,7 +67,6 @@
 }
 body {
   font-family: open;
-  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
 }
 
@@ -51,6 +74,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+p {
+  text-align: justify;
 }
 
 h1,
@@ -62,6 +89,11 @@ h2 {
   width: 605px;
 }
 
+@media screen and (max-width: 992px) {
+  .image {
+    width: 30em;
+  }
+}
 @media only screen and (max-width: 600px) {
   .image {
     width: 20em;
@@ -92,7 +124,11 @@ h2 {
   height: 45em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
+  .descriptionContainer {
+    height: 40em;
+  }
+
   .descriptionText h2 {
     font-size: 2rem;
     margin-bottom: 1em;
@@ -104,6 +140,19 @@ h2 {
     font-size: 1.2rem;
   }
 }
+@media only screen and (max-width: 600px) {
+  .descriptionText h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  .descriptionText p {
+    width: 20rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 1.2rem;
+    padding: 1em;
+  }
+}
 .explanationContainer {
   background: #fdfdfd;
   height: 45em;
@@ -113,6 +162,9 @@ h2 {
 .explanationText h2 {
   font-size: 3rem;
   margin-bottom: 1em;
+}
+.explanationText p {
+  padding: 1em;
 }
 .explanationText p,
 .explanationText li {
@@ -129,10 +181,37 @@ h2 {
   margin-top: 2em;
 }
 
+@media only screen and (max-width: 992px) {
+  .explanationContainer {
+    background: #fdfdfd;
+    height: 85vh;
+  }
+
+  .explanationText h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
+  .explanationText p,
+.explanationText li {
+    width: 20rem;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+  .explanationText li {
+    margin: 0.3em;
+    padding-left: 1em;
+    width: 18rem;
+  }
+  .explanationText ul {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}
 @media only screen and (max-width: 600px) {
   .explanationContainer {
     background: #fdfdfd;
-    height: 45em;
+    height: 100vh;
     flex-direction: column;
   }
 
@@ -234,6 +313,7 @@ label {
   justify-content: center;
   margin-top: 5em;
   margin-bottom: 1em;
+  scroll-behavior: smooth;
 }
 
 #progressCircleContainer {
@@ -244,13 +324,61 @@ label {
   align-content: center;
   justify-content: center;
   display: none;
+  scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 600px) {
-  .calculationContainer {
-    display: flex;
-    flex-direction: column;
+#circle {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 992px) {
+  .calculationContainer h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 1em;
   }
+  .calculationContainer p {
+    font-size: 1.5rem;
+    padding: 0.5em;
+    text-align: justify;
+  }
+
+  label {
+    width: 20rem;
+    font-size: 1.5rem;
+  }
+
+  .inputArea {
+    width: 12rem;
+  }
+
+  .height,
+.weight {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+  }
+
+  .inputError {
+    font-size: 0.8rem;
+    position: absolute;
+    left: -2%;
+    bottom: -120%;
+    width: 100%;
+  }
+
+  .formInput {
+    margin-left: 0.3em;
+  }
+
+  .weight {
+    margin-top: 3.2em;
+  }
+
+  .buttonCalculate {
+    margin: 1.2em;
+  }
+}
+@media only screen and (max-width: 600px) {
   .calculationContainer h2 {
     font-size: 3rem;
     text-align: center;
@@ -308,6 +436,15 @@ label {
 .feedbackParagraph {
   font-size: 1.5rem;
   margin: 0.5em;
+  display: none;
+}
+
+.showParagraph {
+  display: block;
+}
+
+.help {
+  scroll-behavior: smooth;
 }
 
 .calculateAgainButton {

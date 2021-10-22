@@ -3,13 +3,16 @@
 
 body {
   font-family: open;
-  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
 }
 .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+p {
+  text-align: justify;
 }
 
 h1,
@@ -19,6 +22,12 @@ h2 {
 
 .image {
   width: 605px;
+}
+
+@media screen and (max-width: 992px) {
+  .image {
+    width: 30em;
+  }
 }
 
 @media only screen and (max-width: 600px) {

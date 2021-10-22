@@ -75,6 +75,7 @@ function showUnderweightData(BMI) {
   const feedback =
     "Your BMI is " + BMI + ". This means that you are underweight.";
   document.querySelector(".underweightFeedback").innerText = feedback;
+  document.querySelector(".underweightFeedback").style.display = "block";
   document.querySelector(".underweightHelp").style.display = "block";
   document.querySelector(".underweightHelp").scrollIntoView();
 }
@@ -85,6 +86,7 @@ function showRegularweightData(BMI) {
     BMI +
     ". This means that your weight is fine, congratulations!";
   document.querySelector(".regularweightFeedback").innerText = feedback;
+  document.querySelector(".regularweightFeedback").style.display = "block";
   document.querySelector(".regularweightHelp").style.display = "block";
   document.querySelector(".regularweightHelp").scrollIntoView();
 }
@@ -93,6 +95,7 @@ function showOverweightData(BMI) {
   const feedback =
     "Your BMI is " + BMI + ". This means that you are overweight.";
   document.querySelector(".overweightFeedback").innerText = feedback;
+  document.querySelector(".overweightFeedback").style.display = "block";
   document.querySelector(".overweightHelp").style.display = "block";
   document.querySelector(".overweightHelp").scrollIntoView();
 }
@@ -100,6 +103,7 @@ function showOverweightData(BMI) {
 function showObeseData(BMI) {
   const feedback = "Your BMI is " + BMI + ". This means that you are obese.";
   document.querySelector(".obeseFeedback").innerText = feedback;
+  document.querySelector(".obeseFeedback").style.display = "block";
   document.querySelector(".obeseHelp").style.display = "block";
   document.querySelector(".obeseHelp").scrollIntoView();
 }

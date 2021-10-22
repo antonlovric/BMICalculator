@@ -17,6 +17,25 @@
   height: 45em;
 }
 
+@media only screen and (max-width: 992px) {
+  .descriptionContainer {
+    height: 40em;
+  }
+  .descriptionText {
+    h2 {
+      font-size: 2rem;
+
+      margin-bottom: 1em;
+    }
+    p {
+      width: 20rem;
+      line-height: 1.5;
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .descriptionText {
     h2 {
@@ -29,6 +48,7 @@
       line-height: 1.5;
       text-align: justify;
       font-size: 1.2rem;
+      padding: 1em;
     }
   }
 }

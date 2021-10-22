@@ -11,6 +11,9 @@
     font-size: 3rem;
     margin-bottom: 1em;
   }
+  p {
+    padding: 1em;
+  }
   p,
   li {
     width: 40rem;
@@ -27,10 +30,39 @@
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .explanationContainer {
+    background: $colorLightBackground;
+    height: 85vh;
+  }
+  .explanationText {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+    p,
+    li {
+      width: 20rem;
+      line-height: 1.5;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+    li {
+      margin: 0.3em;
+      padding-left: 1em;
+      width: 18rem;
+    }
+    ul {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .explanationContainer {
     background: $colorLightBackground;
-    height: 45em;
+    height: 100vh;
     flex-direction: column;
   }
   .explanationText {
