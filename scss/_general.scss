@@ -43,3 +43,17 @@ h2 {
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 479px) {
+  .image {
+    width: 15em;
+  }
+  .container {
+    flex-direction: column;
+  }
+  h1,
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+}

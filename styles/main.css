@@ -43,7 +43,7 @@
 }
 @media only screen and (max-width: 600px) {
   .heroSection {
-    padding: 3em;
+    padding: 2em;
     height: 70vh;
   }
 
@@ -97,6 +97,21 @@ h2 {
 @media only screen and (max-width: 600px) {
   .image {
     width: 20em;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  h1,
+h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .image {
+    width: 15em;
   }
 
   .container {
