@@ -44,7 +44,7 @@
 @media only screen and (max-width: 600px) {
   .heroSection {
     padding: 2em;
-    height: 70vh;
+    height: max-content;
   }
 
   .heroText h1 {
@@ -226,7 +226,8 @@ h2 {
 @media only screen and (max-width: 600px) {
   .explanationContainer {
     background: #fdfdfd;
-    height: 100vh;
+    height: max-content;
+    padding: 2em;
     flex-direction: column;
   }
 
