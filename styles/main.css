@@ -483,6 +483,14 @@ label {
   width: 50rem;
 }
 
+.result {
+  color: #6c63ff;
+}
+
+.helpLink {
+  color: #6c63ff;
+}
+
 @media only screen and (max-width: 600px) {
   .feedbackParagraph {
     font-size: 1.3rem;

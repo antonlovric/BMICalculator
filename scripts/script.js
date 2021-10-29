@@ -24,6 +24,7 @@ function drawCircle() {
     "visible";
   document.getElementById("circle").scrollIntoView();
   let BMI = calculateBMI();
+  let props = determineColor(BMI);
   var bar = new ProgressBar.Circle(progressCircleContainer, {
     color: "white",
     strokeWidth: 4,
@@ -31,7 +32,7 @@ function drawCircle() {
     easing: "easeInOut",
     duration: 1400,
     from: { color: "#ff0000", width: 1 },
-    to: { color: "#00ff00", width: 4 },
+    to: props,
     step: function (state, circle) {
       circle.path.setAttribute("stroke", state.color);
       circle.path.setAttribute("stroke-width", state.width);
@@ -46,6 +47,21 @@ function drawCircle() {
     determineCategory(BMI);
     showCalculateAgainButton();
   }, 1400);
+}
+
+function determineColor(BMI) {
+  let props = { color: "#00ff00", width: 4 };
+
+  if (BMI <= 18.5) {
+    props.color = "#EED202";
+  } else if (BMI >= 18.5 && BMI <= 24.9) {
+    props.color = "#00ff00";
+  } else if (BMI >= 25 && BMI <= 29.9) {
+    props.color = "#EED202";
+  } else {
+    props.color = "#DC143C";
+  }
+  return props;
 }
 
 function showCalculateAgainButton() {
@@ -73,8 +89,10 @@ function determineCategory(BMI) {
 
 function showUnderweightData(BMI) {
   const feedback =
-    "Your BMI is " + BMI + ". This means that you are underweight.";
-  document.querySelector(".underweightFeedback").innerText = feedback;
+    "Your BMI is " +
+    BMI +
+    '. This means that you are <span class = "result">underweight</span>.';
+  document.querySelector(".underweightFeedback").innerHTML = feedback;
   document.querySelector(".underweightFeedback").style.display = "block";
   document.querySelector(".underweightHelp").style.display = "block";
   document.querySelector(".underweightHelp").scrollIntoView();
@@ -84,8 +102,8 @@ function showRegularweightData(BMI) {
   const feedback =
     "Your BMI is " +
     BMI +
-    ". This means that your weight is fine, congratulations!";
-  document.querySelector(".regularweightFeedback").innerText = feedback;
+    '. This means that your weight is <span class = "result">fine</span>, congratulations!';
+  document.querySelector(".regularweightFeedback").innerHTML = feedback;
   document.querySelector(".regularweightFeedback").style.display = "block";
   document.querySelector(".regularweightHelp").style.display = "block";
   document.querySelector(".regularweightHelp").scrollIntoView();
@@ -93,16 +111,21 @@ function showRegularweightData(BMI) {
 
 function showOverweightData(BMI) {
   const feedback =
-    "Your BMI is " + BMI + ". This means that you are overweight.";
-  document.querySelector(".overweightFeedback").innerText = feedback;
+    "Your BMI is " +
+    BMI +
+    '. This means that you are <span class = "result">overweight</span>.';
+  document.querySelector(".overweightFeedback").innerHTML = feedback;
   document.querySelector(".overweightFeedback").style.display = "block";
   document.querySelector(".overweightHelp").style.display = "block";
   document.querySelector(".overweightHelp").scrollIntoView();
 }
 
 function showObeseData(BMI) {
-  const feedback = "Your BMI is " + BMI + ". This means that you are obese.";
-  document.querySelector(".obeseFeedback").innerText = feedback;
+  const feedback =
+    "Your BMI is " +
+    BMI +
+    '. This means that you are <span class = "result">obese</span>.';
+  document.querySelector(".obeseFeedback").innerHTML = feedback;
   document.querySelector(".obeseFeedback").style.display = "block";
   document.querySelector(".obeseHelp").style.display = "block";
   document.querySelector(".obeseHelp").scrollIntoView();
