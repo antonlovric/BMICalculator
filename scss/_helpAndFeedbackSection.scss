@@ -44,8 +44,14 @@
   }
 }
 
-.result {
-  color: $colorPurple;
+.resultGreen {
+  color: #00ff00;
+}
+.resultRed {
+  color: #dc143c;
+}
+.resultYellow {
+  color: #eed202;
 }
 
 .helpLink {

@@ -9,23 +9,22 @@ window.onload = function () {
 document
   .querySelector(".buttonCalculate")
   .addEventListener("click", drawCircle);
-document
-  .querySelector(".calculateAgainButton")
-  .addEventListener("click", function () {
-    window.location.reload();
-  });
+
+let bar;
 
 function drawCircle() {
   if (!checkInputs()) {
+    resetButtonEvents();
     return;
   }
+  console.log("uso");
   document.querySelector(".buttonCalculate").disabled = true;
   document.getElementById("progressCircleContainer").style.visibility =
     "visible";
   document.getElementById("circle").scrollIntoView();
   let BMI = calculateBMI();
   let props = determineColor(BMI);
-  var bar = new ProgressBar.Circle(progressCircleContainer, {
+  bar = new ProgressBar.Circle(progressCircleContainer, {
     color: "white",
     strokeWidth: 4,
     trailWidth: 1,
@@ -42,30 +41,66 @@ function drawCircle() {
   });
   bar.text.style.fontSize = "2rem";
   document.querySelector(".bmiContainer").scrollIntoView();
-  bar.animate(1);
-  setTimeout(function () {
+  bar.animate(1, [], function () {
     determineCategory(BMI);
-    showCalculateAgainButton();
-  }, 1400);
+    allowNewCalculation();
+    document.querySelector(".buttonCalculate").disabled = false;
+  });
+}
+
+function resetButtonEvents() {
+  document
+    .querySelector(".buttonCalculate")
+    .removeEventListener("click", removeCircle);
+  document
+    .querySelector(".buttonCalculate")
+    .addEventListener("click", drawCircle);
+}
+
+function allowNewCalculation() {
+  document
+    .querySelector(".buttonCalculate")
+    .removeEventListener("click", drawCircle);
+  document
+    .querySelector(".buttonCalculate")
+    .addEventListener("click", removeCircle);
+}
+
+function removeCircle() {
+  bar.destroy();
+  hideFeedback();
+  resetButtonEvents();
+  drawCircle();
+}
+
+function hideFeedback() {
+  const feedbackParagraphs = document.querySelectorAll(".feedbackParagraph");
+  const helpLists = document.querySelectorAll(".helpList");
+
+  feedbackParagraphs.forEach((paragraph) => {
+    paragraph.style.display = "none";
+  });
+
+  helpLists.forEach((list) => {
+    list.style.display = "none";
+  });
 }
 
 function determineColor(BMI) {
-  let props = { color: "#00ff00", width: 4 };
-
+  const green = "#00ff00";
+  const red = "#DC143C";
+  const yellow = "#EED202";
+  let props = { color: green, width: 4 };
   if (BMI <= 18.5) {
-    props.color = "#EED202";
+    props.color = yellow;
   } else if (BMI >= 18.5 && BMI <= 24.9) {
-    props.color = "#00ff00";
+    props.color = green;
   } else if (BMI >= 25 && BMI <= 29.9) {
-    props.color = "#EED202";
+    props.color = yellow;
   } else {
-    props.color = "#DC143C";
+    props.color = red;
   }
   return props;
-}
-
-function showCalculateAgainButton() {
-  document.querySelector(".calculateAgainButton").style.display = "block";
 }
 
 function calculateBMI() {
@@ -91,10 +126,11 @@ function showUnderweightData(BMI) {
   const feedback =
     "Your BMI is " +
     BMI +
-    '. This means that you are <span class = "result">underweight</span>.';
+    '. This means that you are <span class = "resultYellow">underweight</span>.';
   document.querySelector(".underweightFeedback").innerHTML = feedback;
   document.querySelector(".underweightFeedback").style.display = "block";
   document.querySelector(".underweightHelp").style.display = "block";
+
   document.querySelector(".underweightHelp").scrollIntoView();
 }
 
@@ -102,7 +138,7 @@ function showRegularweightData(BMI) {
   const feedback =
     "Your BMI is " +
     BMI +
-    '. This means that your weight is <span class = "result">fine</span>, congratulations!';
+    '. This means that your weight is <span class = "resultGreen">fine</span>, congratulations!';
   document.querySelector(".regularweightFeedback").innerHTML = feedback;
   document.querySelector(".regularweightFeedback").style.display = "block";
   document.querySelector(".regularweightHelp").style.display = "block";
@@ -113,7 +149,7 @@ function showOverweightData(BMI) {
   const feedback =
     "Your BMI is " +
     BMI +
-    '. This means that you are <span class = "result">overweight</span>.';
+    '. This means that you are <span class = "resultYellow">overweight</span>.';
   document.querySelector(".overweightFeedback").innerHTML = feedback;
   document.querySelector(".overweightFeedback").style.display = "block";
   document.querySelector(".overweightHelp").style.display = "block";
@@ -124,7 +160,7 @@ function showObeseData(BMI) {
   const feedback =
     "Your BMI is " +
     BMI +
-    '. This means that you are <span class = "result">obese</span>.';
+    '. This means that you are <span class = "resultRed">obese</span>.';
   document.querySelector(".obeseFeedback").innerHTML = feedback;
   document.querySelector(".obeseFeedback").style.display = "block";
   document.querySelector(".obeseHelp").style.display = "block";
@@ -135,6 +171,7 @@ function checkInputs() {
   let height = checkHeight();
   let weight = checkWeight();
   if (!height || !weight) {
+    document.getElementById("progressCircleContainer").style.display = "none";
     return false;
   }
 
