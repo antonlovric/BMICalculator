@@ -19,7 +19,9 @@
 
 @media only screen and (max-width: 992px) {
   .descriptionContainer {
-    height: 40em;
+    height: max-content;
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
   .descriptionText {
     h2 {

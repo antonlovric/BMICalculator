@@ -93,7 +93,7 @@ h2 {
 @media screen and (max-width: 992px) {
   .heroSection {
     padding: 3em;
-    height: 65vh;
+    height: max-content;
   }
 
   .heroText h1 {
@@ -152,7 +152,9 @@ h2 {
 
 @media only screen and (max-width: 992px) {
   .descriptionContainer {
-    height: 40em;
+    height: max-content;
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
 
   .descriptionText h2 {
@@ -188,10 +190,11 @@ h2 {
 .explanationText h2 {
   font-size: 3rem;
   margin-bottom: 1em;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 .explanationText p {
   padding: 1em;
+  margin-left: 1.5em;
 }
 .explanationText p,
 .explanationText li {
@@ -212,18 +215,21 @@ h2 {
 @media only screen and (max-width: 992px) {
   .explanationContainer {
     background: #fdfdfd;
-    height: 85vh;
+    height: max-content;
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
 
   .explanationText h2 {
     font-size: 2rem;
     margin-bottom: 0.5em;
+    margin-top: 1em;
   }
   .explanationText p,
 .explanationText li {
     width: 20rem;
     line-height: 1.5;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: justify;
   }
   .explanationText li {
@@ -247,6 +253,7 @@ h2 {
   .explanationText h2 {
     font-size: 1.7rem;
     margin-bottom: 1em;
+    margin-left: auto;
   }
   .explanationText p,
 .explanationText li {
@@ -254,6 +261,7 @@ h2 {
     line-height: 1.5;
     font-size: 1.1rem;
     text-align: justify;
+    margin-left: auto;
   }
   .explanationText li {
     margin: 0.3em;
@@ -263,6 +271,7 @@ h2 {
   .explanationText ul {
     margin-top: 2em;
     margin-bottom: 2em;
+    margin-left: auto;
   }
 }
 .calculationSection {
