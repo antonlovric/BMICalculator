@@ -80,13 +80,13 @@ h2 {
 }
 
 .heroText h1 {
-  width: 10rem;
+  max-width: 10rem;
   font-size: 5rem;
   color: #6c63ff;
   margin-bottom: 0.7em;
 }
 .heroText p {
-  width: 40rem;
+  max-width: 40rem;
   font-size: 3rem;
 }
 
@@ -118,6 +118,7 @@ h2 {
   }
 
   .heroText h1 {
+    margin: auto;
     font-size: 2.8rem;
     order: 1;
     width: 100%;
