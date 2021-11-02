@@ -70,6 +70,11 @@ label {
   font-size: 1.2rem;
   width: 10rem;
   padding: 1em;
+  background: $colorPurple;
+  border: none;
+  border-radius: 10px;
+  color: $colorLightText;
+  cursor: pointer;
 }
 
 .bmiContainer {

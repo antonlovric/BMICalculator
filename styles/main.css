@@ -70,7 +70,7 @@ h2 {
 .heroSection {
   background-color: #fdfdfd;
   width: 100%;
-  height: 90vh;
+  height: max-content;
   padding: 5em;
   display: flex;
 }
@@ -98,7 +98,7 @@ h2 {
 
   .heroText h1 {
     font-size: 2.8rem;
-    width: 100%;
+    max-width: 100%;
   }
   .heroText p {
     font-size: 1.5rem;
@@ -132,7 +132,7 @@ h2 {
   }
 
   .heroImage {
-    width: 15em;
+    max-width: 15em;
     order: 2;
   }
 }
@@ -141,14 +141,14 @@ h2 {
   margin-bottom: 1em;
 }
 .descriptionText p {
-  width: 40rem;
+  max-width: 40rem;
   line-height: 1.5;
   font-size: 1.4rem;
 }
 
 .descriptionContainer {
   background: #dae8ea;
-  height: 45em;
+  min-height: 45em;
 }
 
 @media only screen and (max-width: 992px) {
@@ -163,7 +163,7 @@ h2 {
     margin-bottom: 1em;
   }
   .descriptionText p {
-    width: 20rem;
+    max-width: 20rem;
     line-height: 1.5;
     text-align: justify;
     font-size: 1.2rem;
@@ -175,7 +175,7 @@ h2 {
     margin-bottom: 1em;
   }
   .descriptionText p {
-    width: 20rem;
+    max-width: 20rem;
     line-height: 1.5;
     text-align: justify;
     font-size: 1.2rem;
@@ -184,7 +184,7 @@ h2 {
 }
 .explanationContainer {
   background: #fdfdfd;
-  height: 45em;
+  min-height: 45em;
   flex-direction: row-reverse;
 }
 
@@ -199,7 +199,7 @@ h2 {
 }
 .explanationText p,
 .explanationText li {
-  width: 40rem;
+  max-width: 40rem;
   line-height: 1.5;
   font-size: 1.4rem;
   text-align: justify;
@@ -228,7 +228,7 @@ h2 {
   }
   .explanationText p,
 .explanationText li {
-    width: 20rem;
+    max-width: 20rem;
     line-height: 1.5;
     font-size: 1.2rem;
     text-align: justify;
@@ -236,7 +236,7 @@ h2 {
   .explanationText li {
     margin: 0.3em;
     padding-left: 1em;
-    width: 18rem;
+    max-width: 18rem;
   }
   .explanationText ul {
     margin-top: 1em;
@@ -258,7 +258,7 @@ h2 {
   }
   .explanationText p,
 .explanationText li {
-    width: 20rem;
+    max-width: 20rem;
     line-height: 1.5;
     font-size: 1.1rem;
     text-align: justify;
@@ -267,7 +267,7 @@ h2 {
   .explanationText li {
     margin: 0.3em;
     padding-left: 1em;
-    width: 18rem;
+    max-width: 18rem;
   }
   .explanationText ul {
     margin-top: 2em;
@@ -345,6 +345,11 @@ label {
   font-size: 1.2rem;
   width: 10rem;
   padding: 1em;
+  background: #6c63ff;
+  border: none;
+  border-radius: 10px;
+  color: #fdfdfd;
+  cursor: pointer;
 }
 
 .bmiContainer {
@@ -486,14 +491,6 @@ label {
   scroll-behavior: smooth;
 }
 
-.calculateAgainButton {
-  font-size: 1.2rem;
-  width: 10rem;
-  padding: 1em;
-  display: none;
-  margin-bottom: 2em;
-}
-
 .help ul {
   display: none;
   margin: 3em;
@@ -502,11 +499,11 @@ label {
 .help li {
   font-size: 1.3rem;
   margin: 0.5em;
-  width: 50rem;
+  max-width: 50rem;
 }
 
 .resultGreen {
-  color: #00ff00;
+  color: #006400;
 }
 
 .resultRed {
@@ -514,7 +511,7 @@ label {
 }
 
 .resultYellow {
-  color: #eed202;
+  color: #9b870c;
 }
 
 .helpLink {
@@ -531,7 +528,7 @@ label {
   .help li {
     font-size: 1rem;
     margin: 1.8em;
-    width: 18rem;
+    max-width: 18rem;
   }
 }
 .navigation {

@@ -2,7 +2,7 @@
 
 .explanationContainer {
   background: $colorLightBackground;
-  height: 45em;
+  min-height: 45em;
   flex-direction: row-reverse;
 }
 
@@ -18,7 +18,7 @@
   }
   p,
   li {
-    width: 40rem;
+    max-width: 40rem;
     line-height: 1.5;
     font-size: 1.4rem;
     text-align: justify;
@@ -48,7 +48,7 @@
     }
     p,
     li {
-      width: 20rem;
+      max-width: 20rem;
       line-height: 1.5;
       font-size: 1.2rem;
       text-align: justify;
@@ -56,7 +56,7 @@
     li {
       margin: 0.3em;
       padding-left: 1em;
-      width: 18rem;
+      max-width: 18rem;
     }
     ul {
       margin-top: 1em;
@@ -80,7 +80,7 @@
     }
     p,
     li {
-      width: 20rem;
+      max-width: 20rem;
       line-height: 1.5;
       font-size: 1.1rem;
       text-align: justify;
@@ -89,7 +89,7 @@
     li {
       margin: 0.3em;
       padding-left: 1em;
-      width: 18rem;
+      max-width: 18rem;
     }
     ul {
       margin-top: 2em;

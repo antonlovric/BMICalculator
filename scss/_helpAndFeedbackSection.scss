@@ -22,14 +22,6 @@
   scroll-behavior: smooth;
 }
 
-.calculateAgainButton {
-  font-size: 1.2rem;
-  width: 10rem;
-  padding: 1em;
-  display: none;
-  margin-bottom: 2em;
-}
-
 .help {
   ul {
     display: none;
@@ -40,18 +32,18 @@
   li {
     font-size: 1.3rem;
     margin: 0.5em;
-    width: 50rem;
+    max-width: 50rem;
   }
 }
 
 .resultGreen {
-  color: #00ff00;
+  color: #006400;
 }
 .resultRed {
   color: #dc143c;
 }
 .resultYellow {
-  color: #eed202;
+  color: #9b870c;
 }
 
 .helpLink {
@@ -68,7 +60,7 @@
     li {
       font-size: 1rem;
       margin: 1.8em;
-      width: 18rem;
+      max-width: 18rem;
     }
   }
 }

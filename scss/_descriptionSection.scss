@@ -6,7 +6,7 @@
     margin-bottom: 1em;
   }
   p {
-    width: 40rem;
+    max-width: 40rem;
     line-height: 1.5;
     font-size: 1.4rem;
   }
@@ -14,7 +14,7 @@
 
 .descriptionContainer {
   background: $colorDarkBackground;
-  height: 45em;
+  min-height: 45em;
 }
 
 @media only screen and (max-width: 992px) {
@@ -30,7 +30,7 @@
       margin-bottom: 1em;
     }
     p {
-      width: 20rem;
+      max-width: 20rem;
       line-height: 1.5;
       text-align: justify;
       font-size: 1.2rem;
@@ -46,7 +46,7 @@
       margin-bottom: 1em;
     }
     p {
-      width: 20rem;
+      max-width: 20rem;
       line-height: 1.5;
       text-align: justify;
       font-size: 1.2rem;
