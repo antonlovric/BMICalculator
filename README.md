@@ -6,3 +6,4 @@ calculated and they get appropriate feedback. The feedback gives
 some tips how the user can improve their health and what they
 should do. This project was made with the help of an external
 library called progressbarjs and SASS.
+This website is hosted at https://antonlovric.github.io/BMICalculator/

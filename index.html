@@ -8,6 +8,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
     <title>BMI</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./styles/main.css" />
 
     <link
@@ -58,10 +59,12 @@
           src="./images/heroImage.svg"
           alt="Hero Image"
           class="image heroImage"
+          data-aos-delay="100"
+          data-aos="fade-in"
         />
         <div class="heroText">
-          <h1>BMI Calculator</h1>
-          <p>
+          <h1 data-aos-delay="200" data-aos="fade-in">BMI Calculator</h1>
+          <p data-aos-delay="300" data-aos="fade-in">
             Calculate your Body Mass Index to improve your lifestyle right now!
           </p>
         </div>
@@ -73,10 +76,12 @@
           src="./images/descriptionImage.svg"
           alt="Personal Trainer Image"
           class="image descriptionImage"
+          data-aos-delay="100"
+          data-aos="fade-in"
         />
         <div class="descriptionText">
-          <h2>What does BMI mean?</h2>
-          <p>
+          <h2 data-aos-delay="200" data-aos="fade-in">What does BMI mean?</h2>
+          <p data-aos-delay="300" data-aos="fade-in">
             Body mass index (BMI) is a measurement which indicates how healthy
             your height and weight proportions are. It is calculated by dividing
             the weight (in kilograms) and height (in centimeters). This simple
@@ -89,18 +94,20 @@
     <section id="explanationSection" class="explanationSection">
       <div class="container explanationContainer">
         <img
+          data-aos-delay="400"
+          data-aos="fade-in"
           src="./images/explanationImage.svg"
           alt="Explanation Image"
           class="image explanationImage"
         />
         <div class="explanationText">
-          <h2>How is BMI measured?</h2>
-          <p>
+          <h2 data-aos-delay="100" data-aos="fade-in">How is BMI measured?</h2>
+          <p data-aos-delay="200" data-aos="fade-in">
             A person’s BMI is measured by dividing the weight (in kilograms) and
             height (in centimeters). The given number is the BMI and these are
             the categories upon which the BMI is evaluated:
           </p>
-          <ul>
+          <ul data-aos-delay="300" data-aos="fade-in">
             <li>Underweight (BMI is lesser than 18.5)</li>
             <li>Regular weight (BMI is between 18.5 and 24.9)</li>
             <li>Overweight (BMI is between 25 and 29.9)</li>
@@ -112,13 +119,15 @@
     </section>
     <section id="calculationSection" class="calculationSection">
       <div class="container calculationContainer">
-        <h2>I want to measure my BMI!</h2>
-        <p>
+        <h2 data-aos-delay="100" data-aos="fade-in">
+          I want to measure my BMI!
+        </h2>
+        <p data-aos-delay="200" data-aos="fade-in">
           That's fantastic! Just enter your height and weight down below and let
           us do the magic!
         </p>
       </div>
-      <form class="form">
+      <form class="form" data-aos-delay="300" data-aos="fade-in">
         <div class="formInput">
           <div class="height">
             <label class="heightLabel" for="height"
@@ -293,5 +302,10 @@
         </ul>
       </section>
     </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700 });
+    </script>
   </body>
 </html>
