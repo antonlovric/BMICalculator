@@ -25,13 +25,13 @@ h2 {
   width: 605px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1300px) {
   .image {
     width: 30em;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .image {
     width: 20em;
   }
